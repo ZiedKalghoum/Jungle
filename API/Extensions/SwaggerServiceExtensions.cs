@@ -8,7 +8,7 @@ namespace API.Extensions
     {
         public static IServiceCollection AddSwaggerDocumetation (this IServiceCollection services) {
             services.AddSwaggerGen (c => {
-                c.SwaggerDoc ("v1", new OpenApiInfo { Title = "Skinet API", Version = "v1" });
+                c.SwaggerDoc ("v1", new OpenApiInfo { Title = "Jungle API", Version = "v1" });
             });
             return services;
         }
@@ -16,7 +16,7 @@ namespace API.Extensions
             app.UseSwagger ();
             app.UseSwaggerUI (c => {
                 c
-                    .SwaggerEndpoint ("/swagger/v1/swagger.json", "Skinet API v1");
+                    .SwaggerEndpoint ("/swagger/v1/swagger.json", "Jungle API v1");
             });
             return app;
         }

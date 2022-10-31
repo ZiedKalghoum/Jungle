@@ -10,7 +10,7 @@ import { IPagination } from './shared/Models/pagination';
 export class AppComponent implements OnInit {
 
   constructor() {}
-   title = 'Skinet';
+   title = 'Jungle';
 
   ngOnInit(): void {
 

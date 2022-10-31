@@ -28,9 +28,10 @@ namespace API {
             services.AddAutoMapper (typeof (MappingProfiles));
 
             services.AddControllers ();
-
-            services.AddDbContext<StoreContext> (x =>
-                x.UseSqlite (_config.GetConnectionString ("DefaultConnection")));
+            services.AddDbContext<StoreContext>(x =>
+                x.UseNpgsql(_config.GetConnectionString("DefaultConnection")));
+            // services.AddDbContext<StoreContext> (x =>
+            //     x.UseSqlite (_config.GetConnectionString ("DefaultConnection")));
             // services.AddDbContext<StoreContext> (options => options.UseSqlite (_config.GetConnectionString ("DefaultConnection")));
             services.AddSingleton<IConnectionMultiplexer> (c => {
                 var configuration = ConfigurationOptions.Parse(_config.GetConnectionString("Redis"), true);

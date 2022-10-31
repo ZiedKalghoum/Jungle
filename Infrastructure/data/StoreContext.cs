@@ -15,16 +15,16 @@ namespace Infrastructure.data {
         public DbSet<ProductType> ProductTypes { get; set; }
         public DbSet<ProductBrand> ProductBrands { get; set; }
 
-        // protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        // {
-        //    optionsBuilder.UseMySQL("server=localhost;database=shopping_store;user=root;password=root");
-        // }
+         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+         {
+            optionsBuilder.UseNpgsql("server=localhost;database=jungle");
+         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
            base.OnModelCreating(modelBuilder);
            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-           if (Database.ProviderName == "Microsoft.EntityFrameworkCore.Sqlite")
-            {
+           //if (Database.ProviderName == "Microsoft.EntityFrameworkCore.Sqlite")
+            //{
                 foreach (var entityType in modelBuilder.Model.GetEntityTypes())
                 {
                     var properties = entityType.ClrType.GetProperties().Where(p => p.PropertyType == typeof(decimal));
@@ -42,7 +42,7 @@ namespace Infrastructure.data {
                             .HasConversion(new DateTimeOffsetToBinaryConverter());
                     }
                 }
-            }
+            //}
 
         }
     }
