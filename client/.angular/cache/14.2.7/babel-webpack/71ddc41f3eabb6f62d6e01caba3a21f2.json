@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class ShopParams {\n  constructor() {\n    this.brandId = 0;\n    this.typeId = 0;\n    this.sort = 'name';\n    this.pageNumber = 1; // pageIndex\n\n    this.pageSize = 6; // taille de la page\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

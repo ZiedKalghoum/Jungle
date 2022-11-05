@@ -1,0 +1,1 @@
+{"ast":null,"code":"import uuid from 'uuid/v4';\nexport class Basket {\n  constructor() {\n    this.id = uuid();\n    this.items = [];\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

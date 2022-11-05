@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "i60pd0IypRSSFLUI7u0peW4ByiaZ9NZ6M0LIZWfDYaQ=",
+  "Hash": "RWx+L9I+drwxFGC24/N3bGHdKXfC6IXlYKq7TwmQrh0=",
   "Source": "API",
   "BasePath": "_content/API",
   "Mode": "Default",
@@ -287,23 +287,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/products/nike_air.jpg"
-    },
-    {
-      "Identity": "/Users/dhmit/Desktop/Jungle/Jungle/API/wwwroot/images/products/nike_air1.jpg.jpg",
-      "SourceId": "API",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Users/dhmit/Desktop/Jungle/Jungle/API/wwwroot/",
-      "BasePath": "_content/API",
-      "RelativePath": "images/products/nike_air1.jpg.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/images/products/nike_air1.jpg.jpg"
     }
   ]
 }
