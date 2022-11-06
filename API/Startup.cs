@@ -1,18 +1,15 @@
-using System.Linq;
-using API.Errors;
+using System.IO;
 using API.Extensions;
+using API.Helpers;
 using API.Middleware;
-using AutoMapper;
-using Core.Interfaces;
 using Infrastructure.data;
+using Infrastructure.Identity;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.OpenApi.Models;
+using Microsoft.Extensions.FileProviders;
 using StackExchange.Redis;
 
 namespace API {
@@ -30,6 +27,10 @@ namespace API {
             services.AddControllers ();
             services.AddDbContext<StoreContext>(x =>
                 x.UseNpgsql(_config.GetConnectionString("DefaultConnection")));
+                services.AddDbContext<AppIdentityDbContext>(x => 
+            {
+                x.UseNpgsql(_config.GetConnectionString("IdentityConnection"));
+            });
             // services.AddDbContext<StoreContext> (x =>
             //     x.UseSqlite (_config.GetConnectionString ("DefaultConnection")));
             // services.AddDbContext<StoreContext> (options => options.UseSqlite (_config.GetConnectionString ("DefaultConnection")));
@@ -39,7 +40,7 @@ namespace API {
             
             });
             services.AddApplicationServices ();
-
+            services.AddIdentityServices(_config);
             services.AddSwaggerDocumetation ();
             services.AddCors (opt => {
                 opt.AddPolicy ("CorsPolicy", policy => {
@@ -63,6 +64,8 @@ namespace API {
             app.UseStaticFiles ();
 
             app.UseCors ("CorsPolicy");
+
+            app.UseAuthentication();
 
             app.UseAuthorization ();
 
