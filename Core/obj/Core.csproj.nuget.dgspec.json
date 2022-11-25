@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/dhmit/Desktop/Jungle/Jungle/Core/Core.csproj": {}
+    "/Users/ziedkalghoum/Desktop/Jungle/Core/Core.csproj": {}
   },
   "projects": {
-    "/Users/dhmit/Desktop/Jungle/Jungle/Core/Core.csproj": {
+    "/Users/ziedkalghoum/Desktop/Jungle/Core/Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/dhmit/Desktop/Jungle/Jungle/Core/Core.csproj",
+        "projectUniqueName": "/Users/ziedkalghoum/Desktop/Jungle/Core/Core.csproj",
         "projectName": "Core",
-        "projectPath": "/Users/dhmit/Desktop/Jungle/Jungle/Core/Core.csproj",
-        "packagesPath": "/Users/dhmit/.nuget/packages/",
-        "outputPath": "/Users/dhmit/Desktop/Jungle/Jungle/Core/obj/",
+        "projectPath": "/Users/ziedkalghoum/Desktop/Jungle/Core/Core.csproj",
+        "packagesPath": "/Users/ziedkalghoum/.nuget/packages/",
+        "outputPath": "/Users/ziedkalghoum/Desktop/Jungle/Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/dhmit/.nuget/NuGet/NuGet.Config"
+          "/Users/ziedkalghoum/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -59,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.403/RuntimeIdentifierGraph.json"
         }
       }
     }

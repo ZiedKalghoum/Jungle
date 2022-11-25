@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/dhmit/Desktop/Jungle/Jungle/API/API.csproj": {}
+    "/Users/ziedkalghoum/Desktop/Jungle/API/API.csproj": {}
   },
   "projects": {
-    "/Users/dhmit/Desktop/Jungle/Jungle/API/API.csproj": {
+    "/Users/ziedkalghoum/Desktop/Jungle/API/API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/dhmit/Desktop/Jungle/Jungle/API/API.csproj",
+        "projectUniqueName": "/Users/ziedkalghoum/Desktop/Jungle/API/API.csproj",
         "projectName": "API",
-        "projectPath": "/Users/dhmit/Desktop/Jungle/Jungle/API/API.csproj",
-        "packagesPath": "/Users/dhmit/.nuget/packages/",
-        "outputPath": "/Users/dhmit/Desktop/Jungle/Jungle/API/obj/",
+        "projectPath": "/Users/ziedkalghoum/Desktop/Jungle/API/API.csproj",
+        "packagesPath": "/Users/ziedkalghoum/.nuget/packages/",
+        "outputPath": "/Users/ziedkalghoum/Desktop/Jungle/API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/dhmit/.nuget/NuGet/NuGet.Config"
+          "/Users/ziedkalghoum/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -26,8 +26,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/dhmit/Desktop/Jungle/Jungle/Infrastructure/Infrastructure.csproj": {
-                "projectPath": "/Users/dhmit/Desktop/Jungle/Jungle/Infrastructure/Infrastructure.csproj"
+              "/Users/ziedkalghoum/Desktop/Jungle/Infrastructure/Infrastructure.csproj": {
+                "projectPath": "/Users/ziedkalghoum/Desktop/Jungle/Infrastructure/Infrastructure.csproj"
               }
             }
           }
@@ -90,21 +90,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.403/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/dhmit/Desktop/Jungle/Jungle/Core/Core.csproj": {
+    "/Users/ziedkalghoum/Desktop/Jungle/Core/Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/dhmit/Desktop/Jungle/Jungle/Core/Core.csproj",
+        "projectUniqueName": "/Users/ziedkalghoum/Desktop/Jungle/Core/Core.csproj",
         "projectName": "Core",
-        "projectPath": "/Users/dhmit/Desktop/Jungle/Jungle/Core/Core.csproj",
-        "packagesPath": "/Users/dhmit/.nuget/packages/",
-        "outputPath": "/Users/dhmit/Desktop/Jungle/Jungle/Core/obj/",
+        "projectPath": "/Users/ziedkalghoum/Desktop/Jungle/Core/Core.csproj",
+        "packagesPath": "/Users/ziedkalghoum/.nuget/packages/",
+        "outputPath": "/Users/ziedkalghoum/Desktop/Jungle/Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/dhmit/.nuget/NuGet/NuGet.Config"
+          "/Users/ziedkalghoum/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -149,21 +149,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.403/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/dhmit/Desktop/Jungle/Jungle/Infrastructure/Infrastructure.csproj": {
+    "/Users/ziedkalghoum/Desktop/Jungle/Infrastructure/Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/dhmit/Desktop/Jungle/Jungle/Infrastructure/Infrastructure.csproj",
+        "projectUniqueName": "/Users/ziedkalghoum/Desktop/Jungle/Infrastructure/Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "/Users/dhmit/Desktop/Jungle/Jungle/Infrastructure/Infrastructure.csproj",
-        "packagesPath": "/Users/dhmit/.nuget/packages/",
-        "outputPath": "/Users/dhmit/Desktop/Jungle/Jungle/Infrastructure/obj/",
+        "projectPath": "/Users/ziedkalghoum/Desktop/Jungle/Infrastructure/Infrastructure.csproj",
+        "packagesPath": "/Users/ziedkalghoum/.nuget/packages/",
+        "outputPath": "/Users/ziedkalghoum/Desktop/Jungle/Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/dhmit/.nuget/NuGet/NuGet.Config"
+          "/Users/ziedkalghoum/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -175,8 +175,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/dhmit/Desktop/Jungle/Jungle/Core/Core.csproj": {
-                "projectPath": "/Users/dhmit/Desktop/Jungle/Jungle/Core/Core.csproj"
+              "/Users/ziedkalghoum/Desktop/Jungle/Core/Core.csproj": {
+                "projectPath": "/Users/ziedkalghoum/Desktop/Jungle/Core/Core.csproj"
               }
             }
           }
@@ -205,7 +205,7 @@
             },
             "Microsoft.IdentityModel.Tokens": {
               "target": "Package",
-              "version": "[6.8.0, )"
+              "version": "[6.25.0, )"
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
@@ -221,7 +221,7 @@
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
-              "version": "[6.8.0, )"
+              "version": "[6.25.0, )"
             }
           },
           "imports": [
@@ -240,7 +240,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.403/RuntimeIdentifierGraph.json"
         }
       }
     }
