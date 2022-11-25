@@ -1,7 +1,9 @@
 # Jungle
 # generate migration 
 1- dotnet ef migrations add InitialDatabase -p Infrastructure -s API
-2- dotnet ef database update
+2- dotnet ef database update --project API
+# identity Migration 
+dotnet ef migrations add IdentityInitial -p Infrastructure -s API -c AppIdentityDbContext -o Identity/Migrations
 # run API
 dotnet run --project API
 # run cli
@@ -12,5 +14,9 @@ dotnet run --project API
 # Client Side
 1- ng g m moduleName-routing --flat
 2- ng g c componentName --flat --skip-tests
-
+# Install certificat
+-- excecute ssl certif in folder ssl
+# Database
+https://postgresapp.com/
+https://www.postgresql.org/ftp/pgadmin/pgadmin4/v6.15/macos/
 
