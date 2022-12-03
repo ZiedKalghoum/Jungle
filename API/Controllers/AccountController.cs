@@ -16,29 +16,29 @@ namespace API.Controllers
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
-        // private readonly ITokenService _tokenService;
+         private readonly ITokenService _tokenService;
         private readonly IMapper _mapper;
-        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, IMapper mapper)
+        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, IMapper mapper, ITokenService tokenService)
         {
             _mapper = mapper;
-            //_tokenService = tokenService;
+            _tokenService = tokenService;
             _signInManager = signInManager;
             _userManager = userManager;
         }
 
-        // [Authorize]
-        // [HttpGet]
-        // public async Task<ActionResult<UserDto>> GetCurrentUser()
-        // {
-        //     var user = await _userManager.FindByEmailFromClaimsPrinciple(User);
+        [Authorize]
+        [HttpGet]
+        public async Task<ActionResult<UserDto>> GetCurrentUser()
+        {
+            var user = await _userManager.FindByEmailFromClaimsPrinciple(User);
 
-        //     return new UserDto
-        //     {
-        //         Email = user.Email,
-        //         Token = _tokenService.CreateToken(user),
-        //         DisplayName = user.DisplayName
-        //     };
-        // }
+            return new UserDto
+            {
+                Email = user.Email,
+                Token = _tokenService.CreateToken(user),
+                DisplayName = user.DisplayName
+            };
+        }
 
         [HttpGet("emailexists")]
         public async Task<ActionResult<bool>> CheckEmailExistsAsync([FromQuery] string email)
@@ -47,28 +47,28 @@ namespace API.Controllers
         }
 
         // [Authorize]
-        // [HttpGet("address")]
-        // public async Task<ActionResult<AddressDto>> GetUserAddress()
-        // {
-        //     var user = await _userManager.FindByEmailWithAddressAsync(User);
+        [HttpGet("address")]
+        public async Task<ActionResult<AddressDto>> GetUserAddress()
+        {
+            var user = await _userManager.FindByEmailWithAddressAsync(User);
 
-        //     return _mapper.Map<AddressDto>(user.Address);
-        // }
+            return _mapper.Map<AddressDto>(user.Address);
+        }
 
-        // [Authorize]
-        // [HttpPut("address")]
-        // public async Task<ActionResult<AddressDto>> UpdateUserAddress(AddressDto address)
-        // {
-        //     var user = await _userManager.FindByEmailWithAddressAsync(User);
+        [Authorize]
+        [HttpPut("address")]
+        public async Task<ActionResult<AddressDto>> UpdateUserAddress(AddressDto address)
+        {
+            var user = await _userManager.FindByEmailWithAddressAsync(User);
 
-        //     user.Address = _mapper.Map<Address>(address);
+            user.Address = _mapper.Map<Address>(address);
 
-        //     var result = await _userManager.UpdateAsync(user);
+            var result = await _userManager.UpdateAsync(user);
 
-        //     if (result.Succeeded) return Ok(_mapper.Map<AddressDto>(user.Address));
+            if (result.Succeeded) return Ok(_mapper.Map<AddressDto>(user.Address));
 
-        //     return BadRequest("Problem updating the user");
-        // }
+            return BadRequest("Problem updating the user");
+        }
 
 
         [HttpPost("login")]
@@ -85,7 +85,7 @@ namespace API.Controllers
             return new UserDto
             {
                 Email = user.Email,
-                Token = "_tokenService.CreateToken(user)",
+                Token = _tokenService.CreateToken(user),
                 DisplayName = user.DisplayName
             };
         }
@@ -112,7 +112,7 @@ namespace API.Controllers
             return new UserDto
             {
                 DisplayName = user.DisplayName,
-                Token = "_tokenService.CreateToken(user)",
+                Token = _tokenService.CreateToken(user),
                 Email = user.Email
             };
         }

@@ -1,17 +1,17 @@
 using System.Linq;
 using API.Errors;
-using API.Middleware;
 using Core.Interfaces;
 using Infrastructure.data;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
+using Infrastructure.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace API.Extensions {
+namespace API.Extensions
+{
     public static  class ApplicationServicesExtensions {
         public static IServiceCollection AddApplicationServices (this IServiceCollection services) {
 
+            services.AddScoped<ITokenService, TokenService>();
             services.AddScoped (typeof (IGenericRepository<>), typeof (GenericRepository<>));
             services.AddScoped<IBasketRepository, BasketRepository>();
             services.Configure<ApiBehaviorOptions> (options => {
