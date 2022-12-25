@@ -3,6 +3,8 @@ using API.Errors;
 using Core.Interfaces;
 using Infrastructure.data;
 using Infrastructure.Services;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 
