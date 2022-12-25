@@ -46,8 +46,8 @@ namespace API.Controllers
             return await _userManager.FindByEmailAsync(email) != null;
         }
 
-        // [Authorize]
-        [HttpGet("address")]
+        [Authorize]
+        [HttpGet("address")] 
         public async Task<ActionResult<AddressDto>> GetUserAddress()
         {
             var user = await _userManager.FindByEmailWithAddressAsync(User);
@@ -69,8 +69,12 @@ namespace API.Controllers
 
             return BadRequest("Problem updating the user");
         }
-
-
+        [HttpGet("testautho")]
+        [Authorize]
+        public ActionResult<string> GetSecretText()
+        {
+            return "secret stuff";
+        }
         [HttpPost("login")]
         public async Task<ActionResult<UserDto>> Login(LoginDto loginDto)
         {
@@ -95,7 +99,7 @@ namespace API.Controllers
         {
             if (CheckEmailExistsAsync(registerDto.Email).Result.Value)
             {
-                return new BadRequestObjectResult(new ApiValidationErrorResponse{Errors = new[] {"Email address is in use"}});
+                return new BadRequestObjectResult(new ApiValidationErrorResponse { Errors = new[] { "Email address is in use" } });
             }
 
             var user = new AppUser
