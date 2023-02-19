@@ -6,3 +6,8 @@ appsettings.json
 publish
 wwwroot
 *.pack
+*.dll
+*.cache
+*.pdb
+.DS_Store
+.vscode
