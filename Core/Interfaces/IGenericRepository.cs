@@ -12,10 +12,8 @@ namespace Core.Interfaces {
         Task<T> GetEntityWithSpec (ISpecification<T> spec);
         Task<IReadOnlyList<T>> ListAsync (ISpecification<T> spec);
         Task<int> CountAsync (ISpecification<T> spec);
-
-        //  Task<IReadOnlyList<T>> FindAsync(Expression <Func<T, bool>> query);
-        //  void Add(T item);
-        //  void Update(T item);
-        //  void Delete (T item);
+         void Add(T item);
+         void Update(T item);
+         void Delete (T item);
     }
 }

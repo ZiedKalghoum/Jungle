@@ -20,3 +20,6 @@ dotnet run --project API
 https://postgresapp.com/
 https://www.postgresql.org/ftp/pgadmin/pgadmin4/v6.15/macos/
 
+# gitignore
+git rm --cached your_file_name
+

@@ -2,6 +2,7 @@ using System.Linq;
 using API.Errors;
 using Core.Interfaces;
 using Infrastructure.data;
+using Infrastructure.Data;
 using Infrastructure.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -14,6 +15,8 @@ namespace API.Extensions
         public static IServiceCollection AddApplicationServices (this IServiceCollection services) {
 
             services.AddScoped<ITokenService, TokenService>();
+            services.AddScoped<IOrderService, OrderService>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped (typeof (IGenericRepository<>), typeof (GenericRepository<>));
             services.AddScoped<IBasketRepository, BasketRepository>();
             services.Configure<ApiBehaviorOptions> (options => {
